@@ -1,0 +1,9 @@
+.footercontent{
+    display: flex;
+    height: 90px;
+
+    &_button{
+        width: 20px;
+        margin: 12px 15px 0 0;
+    }
+}

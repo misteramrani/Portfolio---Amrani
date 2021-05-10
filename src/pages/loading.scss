@@ -1,0 +1,26 @@
+.loading {
+  background-color: black;
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  &_container{
+  &_logo {
+    padding: 3em 1em;
+    border-radius: 50%;
+    box-shadow: 0 0 1em chocolate;
+    animation: glow 1s infinite alternate ease-out;
+  }
+
+}
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 1em chocolate;
+  }
+  to {
+    box-shadow: 0 0 3em chocolate;
+  }
+}

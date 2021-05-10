@@ -1,0 +1,167 @@
+@use '../global';
+
+.modal.showmodal {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  opacity: 0;
+  transition: all 0.1s ease-in-out;
+  pointer-events: none;
+  background-color: rgba(255, 235, 205, 0.555);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  &_window {
+    background-color: black;
+    position: fixed;
+    top: 3rem;
+    bottom: 10rem;
+    left: 10rem;
+    right: 25rem;
+    &_header {
+      background-color: blanchedalmond;
+      &_titlebar {
+        height: 30px;
+        display: flex;
+        align-items: center;
+        &_logo {
+          & > img {
+            margin: 0 0.5rem;
+            vertical-align: middle;
+          }
+        }
+        &_title {
+          color: black;
+          & > p {
+            margin: 0;
+            font-size: 0.9rem;
+          }
+        }
+        &_close {
+          position: absolute;
+          right: 1rem;
+          & > img {
+            height: 60%;
+            vertical-align: middle;
+            width: 0.7rem;
+          }
+        }
+      }
+      &_menubar {
+        height: 30px;
+        &.photo {
+          display: flex;
+          align-items: center;
+        }
+        & > span {
+          color: black;
+          margin: 0 0.5rem 0 1rem;
+          font-size: 0.9rem;
+        }
+        &-browser {
+          margin: 0 1em;
+          &.more {
+            position: absolute;
+            right: -2px;
+            transform: rotate(90deg);
+          }
+          &-url {
+            background-color: rgba(211, 102, 0, 0.11);
+            width: 100%;
+            padding: 0.1em 0 0.3em 1em;
+            border-radius: 2px;
+            color: black;
+          }
+        }
+      }
+    }
+    &_main {
+      height: 100%;
+      & > p {
+        margin: 0.5rem;
+        // width: 60%;
+        font-family: "font1";
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+      }
+      &_iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+      &_piedpiper {
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        &_teamphoto {
+          height: 100%;
+          width: 50%;
+          overflow:hidden;
+          & > img {
+            height: 100%;
+          }
+        }
+        &_info{
+          position: relative;
+          height: 100%;
+          &-heading{
+            padding-left: 2em;
+          }
+          &-text{
+            padding-left: 4em;
+            color: black;
+          }
+          &-footer{
+            position:absolute;
+            bottom: 0;
+            background-color: blanchedalmond;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: flex-end;
+
+            &-button{
+              margin: .5em 2em .5em 0;
+              padding: .3em 1em;
+              background-color: rgb(88, 133, 110);
+              color: blanchedalmond;
+              border: 0;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+    &_footer {
+      background-color: blanchedalmond;
+      height: 25px;
+      bottom: 0;
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      &-txt {
+        color: black;
+        padding: 0 2rem;
+        line-height: 1.4rem;
+        border-left: solid 1px rgba(128, 128, 128, 0.205);
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+// voor photo modal
+
+.modal_window_header.photo {
+  height: unset;
+}
+
+// voor piedpiper modal
+
+// op mobiel, volledige scherm

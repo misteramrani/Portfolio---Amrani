@@ -1,0 +1,54 @@
+.footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #424242;
+  height: 50px;
+  &_logo {
+    padding: 0 1rem;
+    width: 80px;
+    &:hover {
+      background-color: rgba(133, 133, 133, 0.411);
+      transition: 0.2s ease-out;
+    }
+  }
+  &_info {
+    position: absolute;
+    padding: 0.5rem 2rem;
+    height: 100%;
+    right: 0;
+    font-size: 0.7rem;
+    text-align: center;
+    &:hover {
+      background-color: rgba(133, 133, 133, 0.411);
+      transition: 0.2s ease-out;
+    }
+  }
+  &_startmenu {
+    display: none;
+    position: relative;
+    &:checked ~ &_menucontent {
+      display: block;
+    }
+    &_logocontainer {
+      position: relative;
+      display: block;
+      cursor: pointer;
+    }
+    &_menucontent {
+      display: none;
+      position: absolute;
+      left: 120px;
+    }
+    &_menu {
+      background-color: chocolate;
+      position: absolute;
+      bottom: 100%;
+      height: 0;
+      overflow: hidden;
+    }
+  }
+}
+
+
